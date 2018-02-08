@@ -13,9 +13,6 @@ scalaVersion := "2.12.4"
 version in ThisBuild ~= (_.replace('+', '-'))
 dynver in ThisBuild ~= (_.replace('+', '-'))
 
-resolvers += Resolver.bintrayRepo("kamon-io", "sbt-plugins")
-addSbtPlugin("io.kamon" % "sbt-aspectj-runner" % "1.0.4")
-
 lazy val app = (project in file("app"))
   .configs(IntegrationTest)
   .enablePlugins(JavaAppPackaging, DockerPlugin, JavaAgent)
