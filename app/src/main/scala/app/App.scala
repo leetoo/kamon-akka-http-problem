@@ -40,7 +40,7 @@ object App extends App with Routes with Flows {
     }
     .recover { case ex => logger.error("Could not start HTTP connection", ex) }
 
-  logger.info("Started app app...")
+  logger.info("Started the app...")
 
   Await.ready(flow.runWith(Sink.ignore), Duration.Inf)
 }
